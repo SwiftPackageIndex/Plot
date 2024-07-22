@@ -13,7 +13,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - name: Check Swift version
+      - uses: fwal/setup-swift@v2
+      - name: Echo Swift version
         run: swift --version
       - name: Check a Release build
         run: swift build --disable-automatic-resolution -c release
@@ -23,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: fwal/setup-swift@v2
-      - name: Check Swift version
+      - name: Echo Swift version
         run: swift --version
       - name: Run tests
         run: swift test

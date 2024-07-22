@@ -41,9 +41,9 @@ public extension SiteMap {
 }
 
 internal extension SiteMap {
-    static let dateFormatter: DateFormatter = {
+    static var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter
-    }()
+    }
 }
